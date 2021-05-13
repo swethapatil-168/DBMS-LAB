@@ -60,3 +60,14 @@ insert into participated values('A04','KA053408',14,3000);
 insert into participated values('A05','KA095477',15,5000);
 commit;
 select * from participated;
+
+update participated set damage_amount=25000 where report_num=12;
+insert into accident values(16,'2009-04-03','Kanakpura Road');
+select * from accident;
+
+select count(*) from accident where year(accident_date)=2008;
+
+select count(report_num) CNT from car c,participated p where c.reg_num=p.reg_num and model='Lancer';
+                
+
+
